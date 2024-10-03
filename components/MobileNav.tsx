@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandNextjs, TbMenuDeep } from "react-icons/tb";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -21,18 +21,19 @@ const MobileNav = () => {
     <section className="w-full max-w-[264px]">
       <Sheet>
         <SheetTrigger asChild>
-          <Image
-            src="/icons/hamburger.svg"
-            width={36}
-            height={36}
-            alt="hamburger icon"
-            className="cursor-pointer sm:hidden"
-          />
+          <TbMenuDeep className="cursor-pointer md:hidden sm:block text-white text-2xl" />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-dark-1">
           <Link href="/" className="flex items-center gap-1">
-            <TbBrandNextjs className="cursor-pointer sm:hidden text-blue-1 text-4xl" />
-            <p className="text-[26px] font-extrabold text-white">Yxp</p>
+            <Image
+              src="/images/real-logo.svg"
+              alt="logo"
+              width={45}
+              height={5}
+            />
+            <p className="text-[26px] font-extrabold text-white max-sm:hidden">
+              VChat
+            </p>
           </Link>
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
             <SheetClose asChild>
