@@ -1,14 +1,9 @@
-import Image from "next/image";
+import { TbLoader2 } from "react-icons/tb";
 
 const Loader = () => {
   return (
     <div className="flex-center h-screen w-full">
-      <Image
-        src="/icons/loading-circle.svg"
-        alt="Loading..."
-        width={50}
-        height={50}
-      />
+      <TbLoader2 className="text-6xl text-blue-1 animate-spin" />
     </div>
   );
 };
