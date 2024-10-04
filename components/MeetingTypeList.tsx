@@ -10,7 +10,6 @@ import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
 import Loader from "./Loader";
 import { Textarea } from "./ui/textarea";
-import ReactDatePicker from "react-datepicker";
 
 import { Input } from "./ui/input";
 import {
@@ -22,6 +21,8 @@ import {
   TbCopy,
 } from "react-icons/tb";
 import { useToast } from "@/hooks/use-toast";
+
+import CalendarInput from "./CalendarInput";
 
 const initialValues = {
   dateTime: new Date(),
@@ -130,6 +131,10 @@ const MeetingTypeList = () => {
             <label className="text-base font-normal leading-[22.4px] text-sky-2">
               Select Date and Time
             </label>
+            <CalendarInput
+              value={values.dateTime}
+              onChange={(date) => setValues({ ...values, dateTime: date! })}
+            />
             {/* <ReactDatePicker
               selected={values.dateTime}
               onChange={(date) => setValues({ ...values, dateTime: date! })}
