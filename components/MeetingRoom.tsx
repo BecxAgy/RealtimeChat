@@ -37,8 +37,6 @@ const MeetingRoom = () => {
 
   const { useParticipants } = useCallStateHooks();
 
-  const participants = useParticipants();
-
   // for more detail about types of CallingState see: https://getstream.io/video/docs/react/ui-cookbook/ringing-call/#incoming-call-panel
   const callingState = useCallCallingState();
 

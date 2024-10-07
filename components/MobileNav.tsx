@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
-import { TbBrandNextjs, TbMenuDeep } from "react-icons/tb";
+import { TbMenuDeep } from "react-icons/tb";
 
 const MobileNav = () => {
   const pathname = usePathname();

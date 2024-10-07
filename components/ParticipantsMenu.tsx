@@ -1,4 +1,5 @@
 import { useCallStateHooks } from "@stream-io/video-react-sdk";
+import Image from "next/image";
 import React from "react";
 
 const ParticipantsMenu = ({ onClose }: { onClose: () => void }) => {
@@ -11,7 +12,7 @@ const ParticipantsMenu = ({ onClose }: { onClose: () => void }) => {
         <div key={participant.sessionId}>
           <div className="flex items-center gap-2 bg-dark-4 p-2 rounded-lg">
             <div className="flex items-center">
-              <img
+              <Image
                 className="w-8 h-8 rounded-full"
                 src={participant.image}
                 alt={participant.name}
