@@ -7,13 +7,13 @@ import {
   useCallStateHooks,
 } from "@stream-io/video-react-sdk";
 
-import Alert from "./Alert";
 import { Button } from "./ui/button";
 import MicToggle from "./MicToggle";
 import CamToggle from "./CamToggle";
 import useMediaToggle from "@/hooks/useMediaToggle";
 import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
+import Alert from "./Alert";
 
 const MeetingSetup = ({
   setIsSetupComplete,

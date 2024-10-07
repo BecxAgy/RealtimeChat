@@ -1,5 +1,6 @@
 "use client";
 import Loader from "@/components/Loader";
+import MeetingRoom from "@/components/MeetingRoom";
 import MeetingSetup from "@/components/MeetingSetup";
 import { useGetCallById } from "@/hooks/useGetCallById";
 import { useUser } from "@clerk/nextjs";
@@ -20,7 +21,7 @@ const Meeting = ({ params }: { params: { id: string } }) => {
           {!isSetupComplete ? (
             <MeetingSetup setIsSetupComplete={setIsSetupComplete} />
           ) : (
-            <div></div>
+            <MeetingRoom />
           )}
         </StreamTheme>
       </StreamCall>
