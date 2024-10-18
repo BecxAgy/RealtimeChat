@@ -16,6 +16,8 @@ const ParticipantsMenu = ({ onClose }: { onClose: () => void }) => {
                 className="w-8 h-8 rounded-full"
                 src={participant.image}
                 alt={participant.name}
+                width={32}
+                height={32}
               />
             </div>
             <div className="flex items-center">
